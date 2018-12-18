@@ -1,4 +1,4 @@
-# ringcentral-embeddable-chrome-extension-template-spa <!-- omit in toc -->
+# ringcentral-chrome-extension-template-spa <!-- omit in toc -->
 
 RingCentral embeddable Chrome extension template for single page app CRM site.
 

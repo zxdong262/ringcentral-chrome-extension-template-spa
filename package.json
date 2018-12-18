@@ -1,5 +1,5 @@
 {
-  "name": "ringcentral-embeddable-chrome-extension-template-spa",
+  "name": "ringcentral-chrome-extension-template-spa",
   "version": "0.1.0",
   "description": "RingCentral Embeddable Voice with chrome extension for CRM sites",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zxdong262/ringcentral-embeddable-chrome-extension-template-spa.git"
+    "url": "git+https://github.com/zxdong262/ringcentral-chrome-extension-template-spa.git"
   },
   "keywords": [
     "RingCentral",
@@ -21,9 +21,9 @@
   "author": "Drake Zhao <drake.zhao@ringcentral.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zxdong262/ringcentral-embeddable-chrome-extension-template-spa/issues"
+    "url": "https://github.com/zxdong262/ringcentral-chrome-extension-template-spa/issues"
   },
-  "homepage": "https://github.com/zxdong262/ringcentral-embeddable-chrome-extension-template-spa#readme",
+  "homepage": "https://github.com/zxdong262/ringcentral-chrome-extension-template-spa#readme",
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
