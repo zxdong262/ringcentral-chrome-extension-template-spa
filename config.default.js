@@ -1,4 +1,4 @@
-const os = require('os')
+
 const extend = require('recursive-assign')
 let config = {
 

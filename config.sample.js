@@ -7,14 +7,6 @@ module.exports = {
 
   //// dev related
 
-  // local dev server port
-  // devPort: 8020,
-
-  // build process count
-  // devCPUCount: os.cpus().length,
-
-  //// build options
-
   // minimize content.js
   // minimize: false
 
