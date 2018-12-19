@@ -63,19 +63,31 @@ var config = {
       },
       {
         test: /\.jsx?$/,
+        exclude: /node_modules\/(?!(ringcentral-embeddable-extension-common)\/).*/,
         use: [
           {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
               presets: [
-                '@babel/preset-env',
-                {
-                  plugins: [
-                    '@babel/plugin-proposal-class-properties',
-                    'babel-plugin-lodash'
-                  ]
-                }
+                '@babel/preset-env'
+              ],
+              plugins: [
+                '@babel/plugin-proposal-class-properties',
+                'babel-plugin-lodash',
+                '@babel/plugin-syntax-dynamic-import',
+                [
+                  '@babel/plugin-proposal-decorators',
+                  {
+                    legacy: true
+                  }
+                ],
+                [
+                  '@babel/plugin-transform-runtime',
+                  {
+                    regenerator: true
+                  }
+                ]
               ]
             }
           }

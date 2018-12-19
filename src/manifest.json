@@ -28,7 +28,9 @@
   },
   "content_scripts": [
     {
-      "matches": [],
+      "matches": [
+        "https://*.pipedrive.com/*"
+      ],
       "exclude_matches": [],
       "js": [
         "./content.js"
