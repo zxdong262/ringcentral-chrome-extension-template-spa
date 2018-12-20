@@ -124,6 +124,8 @@ export function thirdPartyServiceConfig(serviceName) {
   }
 
   // handle ringcentral event
+  // check https://github.com/zxdong262/pipedrive-embeddable-ringcentral-phone-spa/blob/master/src/config.js
+  // as example
   let handleRCEvents = async e => {
     console.log(e)
     //   let {data} = e
