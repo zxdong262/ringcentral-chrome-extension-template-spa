@@ -265,6 +265,7 @@ export async function initThirdParty() {
 export function checkTab(tab) {
   return !!tab.url
   /** url check examples
+   * return /https:\/\/.+\.pipedrive.com\/.+/.test(tab.url)
     tab.url.startsWith('https://app.hubspot.com') &&
     !tab.url.startsWith('https://app.hubspot.com/login') &&
     !tab.url.startsWith('https://app.hubspot.com/myaccounts-beta') &&
