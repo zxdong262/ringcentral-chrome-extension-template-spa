@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-chrome-extension-template-spa",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "RingCentral Embeddable Voice with chrome extension for CRM sites",
   "main": "index.js",
   "scripts": {
