@@ -14,12 +14,12 @@ import {
 } from 'ringcentral-embeddable-extension-common/src/common/helpers'
 */
 
-// insert click to call button
+// config insert click to call button
 export const insertClickToCallButton = [
   /*
   {
-    // must match page url
-    urlCheck: href => {
+    // before insert check pre condition like page url or something else
+    shouldAct: href => {
       return href.includes('xxxx')
     },
 
@@ -58,8 +58,8 @@ export const hoverShowClickToCallButton = [
   /*
   //config example
   {
-    // must match url
-    urlCheck: href => {
+    // before insert check pre condition like page url or something else
+    shouldAct: href => {
       return href.includes('list/Contact/')
     },
 
@@ -85,7 +85,8 @@ export const hoverShowClickToCallButton = [
 export const phoneNumberSelectors = [
   /* example config
   {
-    urlCheck: (href) => {
+    // before insert check pre condition like page url or something else
+    shouldAct: (href) => {
       return href.includes('?blade=/details/contact')
     },
     selector: '#modal-details-body .metadata-span-phone'
@@ -257,19 +258,4 @@ export function thirdPartyServiceConfig(serviceName) {
  */
 export async function initThirdParty() {
 
-}
-
-/**
- * for background.js, check current tab is extension target tab or not
- * @param {object} tab
- */
-export function checkTab(tab) {
-  return !!tab.url
-  /** url check examples
-   * return /https:\/\/.+\.pipedrive.com\/.+/.test(tab.url)
-    tab.url.startsWith('https://app.hubspot.com') &&
-    !tab.url.startsWith('https://app.hubspot.com/login') &&
-    !tab.url.startsWith('https://app.hubspot.com/myaccounts-beta') &&
-    !tab.url.startsWith('https://app.hubspot.com/developer')
-   */
 }
