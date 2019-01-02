@@ -92,6 +92,16 @@ To make it easier, we already set common modules to reduce developer efforts, yo
 - Edit [src/content.js](src/content.js) to make all features to work
 - Further more you can edit [src/manifest.json](src/manifest.json) or [src/background.js](src/background.js) to do more customization work.
 - And you can always read [Realworld examples](#realworld-examples) source code as examples
+- You can use built-in oauth support like this:
+
+```js
+import getAuthCode from 'ringcentral-embeddable-extension-common/src/feat/browser-oauth'
+
+async function auth() {
+  let authCode = await getAuthCode(authUrl)
+  // do something like get access code with auth code
+}
+```
 
 ## Credits
 
