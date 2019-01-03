@@ -95,6 +95,8 @@ To make it easier, we already set common modules to reduce developer efforts, yo
 - You can use built-in oauth support like this:
 
 ```js
+// read docs about auth url from https://developer.chrome.com/apps/identity#method-launchWebAuthFlow
+// make sure the redirect url match the pattern https://<app-id>.chromiumapp.org/*
 import getAuthCode from 'ringcentral-embeddable-extension-common/src/feat/browser-oauth'
 
 async function auth() {
