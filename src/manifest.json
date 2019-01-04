@@ -10,7 +10,8 @@
     "tabs",
     "background",
     "tabCapture",
-    "system.display"
+    "system.display",
+    "identity"
   ],
   "page_action": {
     "default_icon": {
