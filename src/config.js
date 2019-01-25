@@ -89,6 +89,7 @@ export const phoneNumberSelectors = [
     shouldAct: (href) => {
       return href.includes('?blade=/details/contact')
     },
+    selector: '#modal-details-body .metadata-span-phone',
     getPhoneNumber: (node) => {
       return node.textContent.trim()
     }
