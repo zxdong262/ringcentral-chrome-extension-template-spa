@@ -4,6 +4,7 @@ const sysConfigDefault = require('./config.default')
 const ExtraneousFileCleanupPlugin = require('webpack-extraneous-file-cleanup-plugin')
 const path = require('path')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const stylusSettingPlugin =  new webpack.LoaderOptionsPlugin({
   test: /\.styl$/,
@@ -11,6 +12,19 @@ const stylusSettingPlugin =  new webpack.LoaderOptionsPlugin({
     preferPathResolver: 'webpack'
   }
 })
+
+const from = path.resolve(
+  __dirname,
+  'node_modules/ringcentral-embeddable-extension-common/src/icons'
+)
+const to1 = path.resolve(
+  __dirname,
+  'dist/icons'
+)
+const to2 = path.resolve(
+  __dirname,
+  'dist-firefox/icons'
+)
 
 const opts = {
   extensions: ['.map', '.js'],
@@ -127,6 +141,15 @@ var config = {
       collections: true,
       paths: true
     }),
+    new CopyWebpackPlugin([{
+      from,
+      to: to1,
+      force: true
+    }, {
+      from,
+      to: to2,
+      force: true
+    }], {}),
     new ExtraneousFileCleanupPlugin(opts),
     new webpack.DefinePlugin({
       'process.env.ringCentralConfigs': JSON.stringify(sysConfigDefault.ringCentralConfigs),
