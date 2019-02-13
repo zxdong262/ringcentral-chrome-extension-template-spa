@@ -7,9 +7,8 @@
 .idea/
 /temp/
 .vscode/
-/dist/*.js
-/dist/*.json
-/dist/*.map
+/dist/
+/dist-firefox/
 package-lock.json
 /config.js
 
