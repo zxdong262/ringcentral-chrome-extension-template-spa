@@ -31,7 +31,10 @@ var config = {
   entry: {
     content: './src/content.js',
     background: './src/background.js',
-    manifest: './src/manifest.json'
+    manifest: './src/manifest.json',
+    '../dist-firefox/content': './src/content.js',
+    '../dist-firefox/background': './src/background.js',
+    '../dist-firefox/manifest': './src/manifest-firefox.json'
   },
   output: {
     path: __dirname + '/dist',
@@ -46,7 +49,7 @@ var config = {
   },
   resolveLoader: {
     modules: [
-      path.join(process.cwd(), 'loaders'),
+      path.join(process.cwd(), 'node_modules/ringcentral-embeddable-extension-common/loaders'),
       path.join(process.cwd(), 'node_modules')
     ]
   },
@@ -56,7 +59,7 @@ var config = {
   module: {
     rules: [
       {
-        test: /manifest\.json$/,
+        test: /manifest\.json$|manifest-firefox\.json$/,
         use: [
           'manifest-loader'
         ]

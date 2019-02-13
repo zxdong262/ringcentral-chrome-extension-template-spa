@@ -11,7 +11,6 @@ RingCentral embeddable Chrome/Firefox extension template for single page app CRM
 - [Build and Use](#build-and-use)
 - [Build with custom RingCentral clientID/appServer](#build-with-custom-ringcentral-clientidappserver)
 - [Make the features works](#make-the-features-works)
-- [Credits](#credits)
 - [License](#license)
 
 ## Features
@@ -61,9 +60,9 @@ npm start
 # after rebuild, do not forget to refresh in extension page
 ```
 
-1. Go to Chrome extensions page.
+1. Go to Chrome extensions page/Firefox choose Addon -> Enable add-on debugging -> Load Temporary Add-on.
 2. Open developer mode
-3. Load `dist` as unpacked package.
+3. Load `dist` as unpacked package.(For Firefox, load `dist-firefox/manifest.json`)
 4. Go to the CRM site to check
 
 ## Build with custom RingCentral clientID/appServer
@@ -104,11 +103,6 @@ async function auth() {
   // do something like get access code with auth code
 }
 ```
-
-## Credits
-
-Created with [Embbnux Ji](https://github.com/embbnux)'s tuturial:
- [Building Chrome Extension Integrations with RingCentral Embeddable](https://medium.com/ringcentral-developers/build-a-chrome-extension-with-ringcentral-embeddable-bb6faee808a3)
 
 ## License
 
