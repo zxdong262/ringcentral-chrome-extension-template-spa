@@ -67,7 +67,7 @@ npm start
 
 ## Build with custom RingCentral clientID/appServer
 
-- Create an app from [https://developer.ringcentral.com/](https://developer.ringcentral.com/), make sure you choose a browser based app, and set all permissions, and add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`.
+- Create an app from [https://developer.ringcentral.com/](https://developer.ringcentral.com/), make sure you choose a browser based app, and set permissions: `Edit Messages`, `Edit Presence`, `Internal Messages`, `Read Accounts`, `Read Call Log`, `Read Contacts`, `Read Messages`, `Read Presence`, `RingOut`, `SMS` and `VoIP Calling`, ---> <a href="https://developer.ringcentral.com/new-app?name=Sample+Bot+App&desc=A+sample+app+created+in+conjunction+with+the+ringcentral+extention&public=true&type=ServerBot&carriers=7710,7310,3420&permissions=EditMessages,EditPresence,InternalMessages,ReadAccounts,ReadCallLog,ReadContacts,ReadMessages,ReadPresence,RingOut,SMS,VoipCalling&redirectUri=" target="_blank">Click to create app</a>, add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`.
 
 - Fill your RingCentral app's clientID and appServer in `config.js`.
 
