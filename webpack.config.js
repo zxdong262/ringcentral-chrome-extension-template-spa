@@ -155,7 +155,7 @@ var config = {
     new webpack.DefinePlugin({
       'process.env.ringCentralConfigs': JSON.stringify(sysConfigDefault.ringCentralConfigs),
       'process.env.thirdPartyConfigs': JSON.stringify(sysConfigDefault.thirdPartyConfigs),
-      'version': JSON.stringify(pack.version)
+      'process.env.version': JSON.stringify(pack.version)
     })
   ]
 }
