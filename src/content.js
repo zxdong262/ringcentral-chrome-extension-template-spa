@@ -5,7 +5,7 @@
 
 import createApp from 'ringcentral-embeddable-extension-common/src/spa/init'
 // import * as config from './config'
-import {ringCentralConfigs} from 'ringcentral-embeddable-extension-common/src/common/app-config'
+import {ringCentralConfigs, appVersion, thirdPartyConfigs} from 'ringcentral-embeddable-extension-common/src/common/app-config'
 import {isIframe} from 'ringcentral-embeddable-extension-common/src/common/helpers'
 import 'ringcentral-embeddable-extension-common/src/spa/style.styl'
 import './custom.styl'
@@ -17,7 +17,7 @@ let {
 
 let appConfigQuery = ''
 if (clientID || appServer) {
-  appConfigQuery = `?appKey=${clientID}&appServer=${encodeURIComponent(appServer)}`
+  appConfigQuery = `?userAgent=${thirdPartyConfigs.serviceName}_extension%2F${appVersion}&appKey=${clientID}&appServer=${encodeURIComponent(appServer)}`
 }
 
 /* eslint-disable-next-line */
