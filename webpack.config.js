@@ -5,6 +5,7 @@ const ExtraneousFileCleanupPlugin = require('webpack-extraneous-file-cleanup-plu
 const path = require('path')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const pack = require('./package.json')
 
 const stylusSettingPlugin =  new webpack.LoaderOptionsPlugin({
   test: /\.styl$/,
@@ -153,7 +154,8 @@ var config = {
     new ExtraneousFileCleanupPlugin(opts),
     new webpack.DefinePlugin({
       'process.env.ringCentralConfigs': JSON.stringify(sysConfigDefault.ringCentralConfigs),
-      'process.env.thirdPartyConfigs': JSON.stringify(sysConfigDefault.thirdPartyConfigs)
+      'process.env.thirdPartyConfigs': JSON.stringify(sysConfigDefault.thirdPartyConfigs),
+      'version': JSON.stringify(pack.version)
     })
   ]
 }
