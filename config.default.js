@@ -10,6 +10,7 @@ let config = {
   //ringcentral config
   ringCentralConfigs: {
     clientID: '',
+    clientSecret: '',
     appServer: ''
   },
 
