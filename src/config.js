@@ -101,8 +101,7 @@ export const phoneNumberSelectors = [
  * thirdPartyService config
  * @param {*} serviceName
  */
-export function thirdPartyServiceConfig(serviceName) {
-
+export function thirdPartyServiceConfig (serviceName) {
   console.log(serviceName)
 
   let services = {
@@ -159,9 +158,9 @@ export function thirdPartyServiceConfig(serviceName) {
     //   if (type !== 'rc-post-message-request') {
     //     return
     //   }
-    
+
     //   let {rc} = window
-    
+
     //   if (data.path === '/authorize') {
     //     if (rc.local.apiKey) {
     //       unAuth()
@@ -259,6 +258,6 @@ export function thirdPartyServiceConfig(serviceName) {
  * init third party
  * could init dom insert etc here
  */
-export async function initThirdParty() {
+export async function initThirdParty () {
 
 }

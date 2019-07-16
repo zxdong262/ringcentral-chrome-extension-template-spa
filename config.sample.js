@@ -5,14 +5,14 @@
  */
 module.exports = {
 
-  //// dev related
+  /// / dev related
 
   // minimize content.js
   // minimize: false
 
   // congfigs to build app
 
-  //// ringcentral config
+  /// / ringcentral config
 
   ringCentralConfigs: {
     clientID: '',
@@ -20,12 +20,11 @@ module.exports = {
     appServer: ''
   },
 
-
-  //// for third party related
+  /// / for third party related
 
   thirdPartyConfigs: {
 
-    //service name, one word only, such as Insightly, RedTailCRM...
+    // service name, one word only, such as Insightly, RedTailCRM...
     serviceName: 'noname',
 
     // show call log sync desc form or not
@@ -33,7 +32,3 @@ module.exports = {
   }
 
 }
-
-
-
-

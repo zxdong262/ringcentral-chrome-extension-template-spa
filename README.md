@@ -4,14 +4,14 @@ RingCentral embeddable Chrome/Firefox extension template for single page app CRM
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Features](#features)
-- [Demo video(Insightly)](#demo-videoinsightly)
-- [Screenshots(Insightly and Hubspot)](#screenshotsinsightly-and-hubspot)
-- [Realworld examples](#realworld-examples)
-- [Build and Use](#build-and-use)
-- [Build with custom RingCentral clientID/appServer](#build-with-custom-ringcentral-clientidappserver)
-- [Make the features works](#make-the-features-works)
-- [License](#license)
+- [Features](#Features)
+- [Demo video(Insightly)](#Demo-videoInsightly)
+- [Screenshots(Insightly and Hubspot)](#ScreenshotsInsightly-and-Hubspot)
+- [Realworld examples](#Realworld-examples)
+- [Build and Use](#Build-and-Use)
+- [Build with custom RingCentral clientID/appServer](#Build-with-custom-RingCentral-clientIDappServer)
+- [Make the features works](#Make-the-features-works)
+- [License](#License)
 
 ## Features
 
@@ -76,7 +76,8 @@ npm start
   ringCentralConfigs: {
     // your ringCentral app's Client ID
     clientID: 'your-clientID',
-
+    // your ringCentral app's Client secret
+    clientSecret: 'your-clientSecret',
     // your ringCentral app's Auth Server URL
     appServer: 'your ringCentral app Auth Server URL'
   },

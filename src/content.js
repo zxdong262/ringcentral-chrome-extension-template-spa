@@ -4,9 +4,9 @@
  */
 
 import createApp from 'ringcentral-embeddable-extension-common/src/spa/init'
-//import * as config from './config'
-import {ringCentralConfigs, thirdPartyConfigs, appVersion} from 'ringcentral-embeddable-extension-common/src/common/app-config'
-import {isIframe} from 'ringcentral-embeddable-extension-common/src/common/helpers'
+// import * as config from './config'
+import { ringCentralConfigs, thirdPartyConfigs, appVersion } from 'ringcentral-embeddable-extension-common/src/common/app-config'
+import { isIframe } from 'ringcentral-embeddable-extension-common/src/common/helpers'
 import 'ringcentral-embeddable-extension-common/src/spa/style.styl'
 import './custom.styl'
 
@@ -17,14 +17,14 @@ let {
 } = ringCentralConfigs
 
 let appConfigQuery = ''
-let {serviceName} = thirdPartyConfigs
+let { serviceName } = thirdPartyConfigs
 if (clientID || appServer) {
   appConfigQuery = `?prefix=${serviceName}-rc&newAdapterUI=1&userAgent=${serviceName}_extension%2F${appVersion}&disableActiveCallControl=false&appKey=${clientID}&appSecret=${clientSecret}&appServer=${encodeURIComponent(appServer)}`
 }
 
 /* eslint-disable-next-line */
 if (!isIframe) {
-  ;(function() {
+  ;(function () {
     console.log('import RingCentral Embeddable Voice to web page')
     var rcs = document.createElement('script')
     rcs.src = 'https://ringcentral.github.io/ringcentral-embeddable/adapter.js' + appConfigQuery
@@ -58,4 +58,3 @@ let config = {
 }
 
 window.addEventListener('load', createApp(config))
-
