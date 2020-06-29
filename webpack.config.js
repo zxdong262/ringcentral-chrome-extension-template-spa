@@ -51,7 +51,7 @@ var config = {
     '../dist-firefox/manifest': './src/manifest-firefox.json'
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     publicPath: '/',
     chunkFilename: '[name].[hash].js',

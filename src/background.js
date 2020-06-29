@@ -4,7 +4,7 @@ import initBackground from 'ringcentral-embeddable-extension-common/src/spa/back
  * for background.js, check current tab is extension target tab or not
  * @param {object} tab
  */
-function checkTab(tab) {
+function checkTab (tab) {
   return !!tab.url
   /** url check examples
    * return /https:\/\/.+\.pipedrive.com\/.+/.test(tab.url)
