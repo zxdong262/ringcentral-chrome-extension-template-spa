@@ -4,56 +4,30 @@
  */
 
 import createApp from 'ringcentral-embeddable-extension-common/src/spa/init'
-// import * as config from './config'
-import {ringCentralConfigs} from 'ringcentral-embeddable-extension-common/src/common/app-config'
-import {isIframe} from 'ringcentral-embeddable-extension-common/src/common/helpers'
+import * as config from './config'
+import { ringCentralConfigs, thirdPartyConfigs, appVersion } from 'ringcentral-embeddable-extension-common/src/common/app-config'
 import 'ringcentral-embeddable-extension-common/src/spa/style.styl'
 import './custom.styl'
 
-let {
+const {
   clientID,
-  appServer
+  appServer,
+  clientSecret
 } = ringCentralConfigs
 
 let appConfigQuery = ''
+const { serviceName } = thirdPartyConfigs
 if (clientID || appServer) {
-  appConfigQuery = `?clientID=${clientID}&appServer=${encodeURIComponent(appServer)}`
+  appConfigQuery = `?appVersion=${appVersion}&zIndex=9999&prefix=${serviceName}-rc&newAdapterUI=1&disconnectInactiveWebphone=1&userAgent=${serviceName}_extension%2F${appVersion}&disableActiveCallControl=false&appKey=${clientID}&appSecret=${clientSecret}&appServer=${encodeURIComponent(appServer)}`
 }
 
 /* eslint-disable-next-line */
-if (!isIframe) {
-  ;(function() {
-    console.log('import RingCentral Embeddable Voice to web page')
-    var rcs = document.createElement('script')
-    rcs.src = 'https://ringcentral.github.io/ringcentral-embeddable/adapter.js' + appConfigQuery
-    var rcs0 = document.getElementsByTagName('script')[0]
-    rcs0.parentNode.insertBefore(rcs, rcs0)
-  })()
-}
-
-let config = {
-  // config for insert click to call button, check ./config.js insertClickToCallButton  for detail
-  insertClickToCallButton: [],
-
-  // config for hover contact node to show click to dial tooltip, check ./config.js hoverShowClickToCallButton for detail
-  hoverShowClickToCallButton: [],
-
-  // config for modify phone number text to click-to-call link, check ./config.js phoneNumberSelectors for detail
-  phoneNumberSelectors: [],
-
-  // third party feature config, check ./config.js thirdPartyServiceConfig function for detail
-  // should return
-  /*
-  {
-    services: object,
-    handleRCEvents: function
-  }
-  */
-  thirdPartyServiceConfig: (serviceName) => console.log(serviceName),
-
-  // after init callback function, can do some extra init here
-  initThirdParty: () => null
-}
+;(function() {
+  console.log('import RingCentral Embeddable Voice to web page')
+  const rcs = document.createElement('script')
+  rcs.src = 'https://ringcentral.github.io/ringcentral-embeddable/adapter.js' + appConfigQuery
+  const rcs0 = document.getElementsByTagName('script')[0]
+  rcs0.parentNode.insertBefore(rcs, rcs0)
+})()
 
 window.addEventListener('load', createApp(config))
-

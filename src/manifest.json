@@ -11,7 +11,7 @@
     "background",
     "tabCapture",
     "system.display",
-    "identity"
+    "unlimitedStorage"
   ],
   "page_action": {
     "default_icon": {
@@ -30,7 +30,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.your-crm-site.com/*"
+        "https://*.pipedrive.com/*"
       ],
       "exclude_matches": [],
       "js": [
@@ -45,6 +45,6 @@
     ],
     "persistent": true
   },
-  "content_security_policy": "script-src 'self' https://ringcentral.github.io/ringcentral-embeddable/index.html; object-src 'self'",
+  "content_security_policy": "script-src 'self' chrome-extension://*; object-src 'self'",
   "manifest_version": 2
 }

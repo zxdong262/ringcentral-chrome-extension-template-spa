@@ -50,8 +50,8 @@ RingCentral embeddable Chrome/Firefox extension template for single page app CRM
 # install dependencies, requires nodejs8.10+
 npm i
 
-# create config file, and set proper thirdPartyConfigs.serviceName
-cp config.sample.js config.js
+# create env file, and set proper serviceName
+cp sample.env .env
 
 # then run it
 npm start
@@ -62,25 +62,14 @@ npm start
 
 1. Go to Chrome extensions page/Firefox choose Addon -> Enable add-on debugging -> Load Temporary Add-on.
 2. Open developer mode
-3. Load `dist` as unpacked package.(For Firefox, load `dist-firefox/manifest.json`)
+3. Load `dist` as unpacked package.
 4. Go to the CRM site to check
 
 ## Build with custom RingCentral clientID/appServer
 
 - Create an app from [https://developer.ringcentral.com/](https://developer.ringcentral.com/), make sure you choose a browser based app, and set all permissions, and add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`.
 
-- Fill your RingCentral app's clientID and appServer in `config.js`.
-
-```js
-
-  ringCentralConfigs: {
-    // your ringCentral app's Client ID
-    clientID: 'your-clientID',
-
-    // your ringCentral app's Auth Server URL
-    appServer: 'your ringCentral app Auth Server URL'
-  },
-```
+- Fill your RingCentral app's clientID and appServer in `.env`.
 
 ## Make the features works
 
