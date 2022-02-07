@@ -1,0 +1,9 @@
+/dist/*.map
+/dist/manifest.js
+/bin/
+/build/
+/temp/
+/*.zip
+/sample.env
+/.eslintignore
+/src/
