@@ -7,7 +7,6 @@
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config build/webpack.config.js --progress -w",
     "clean": "rm -rf dist/*.map && rm dist/manifest.js",
     "start": "npm run build",
-    "postinstall": "node bin/post-install",
     "lint": "./node_modules/.bin/standard",
     "fix": "./node_modules/.bin/standard --fix",
     "down": "node bin/download-adapter.js",
@@ -29,7 +28,6 @@
   },
   "homepage": "https://github.com/zxdong262/ringcentral-chrome-extension-template-spa#readme",
   "devDependencies": {
-    "@ant-design/icons": "4.7.0",
     "@babel/cli": "7.16.0",
     "@babel/core": "7.16.0",
     "@babel/plugin-proposal-class-properties": "7.16.0",
