@@ -40,3 +40,4 @@ docs/esdoc
 yarn.lock
 package-lock.json
 *.zip
+.env
