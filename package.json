@@ -88,5 +88,9 @@
     "globals": [
       "chrome"
     ]
-  }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
